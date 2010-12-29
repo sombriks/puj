@@ -1,0 +1,6 @@
+<menu-header>
+	<opcao href="inicio.xml">Início</opcao>
+	<opcao href="competicoes.xml">Competições</opcao>
+	<opcao href="participantes.xml">Participantes</opcao>
+	<opcao href="patrocinadores.xml">Patrocinadores</opcao>
+</menu-header>
