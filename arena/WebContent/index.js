@@ -3,8 +3,8 @@
  */
 (function() {
 	$("#topo").xslTransform({
-		urlxml : "menu-headers.xml",
-		urlxsl : "menu-headers.xsl",
+		urlxml : "staticdata/menu-headers.xml",
+		urlxsl : "templates/menu-headers.xsl",
 		hook : function() {
 			// registrando eventos do novo trecho de documento
 			$(".portlet .portlet-header").click(function() {
@@ -15,7 +15,7 @@
 							width : "70%",
 							height : "90%"
 						}).find(".portlet-content").xslTransform({
-							urlxsl : "content.xsl",
+							urlxsl : "templates/content.xsl",
 							urlxml : $(this).find("a").attr("href")
 						}).css({
 							visibility : "visible"

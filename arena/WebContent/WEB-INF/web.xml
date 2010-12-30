@@ -7,12 +7,14 @@
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 	<servlet>
-		<display-name>ServletContainer</display-name>
-		<servlet-name>ServletContainer</servlet-name>
+		<description>
+		JAX-RS Tools Generated - Do not modify</description>
+		<servlet-name>JAX-RS Servlet</servlet-name>
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>ServletContainer</servlet-name>
+		<servlet-name>JAX-RS Servlet</servlet-name>
 		<url-pattern>/resource/*</url-pattern>
 	</servlet-mapping>
 	<resource-ref>
