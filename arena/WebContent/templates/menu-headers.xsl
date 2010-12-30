@@ -8,7 +8,8 @@
 				<label>
 					<xsl:value-of select="." />
 				</label>
-				<a style="display:hidden" href="{@href}"></a>
+				<a style="display:hidden" href="{@uri}"></a>
+				<a style="display:hidden" href="{@template}"></a>
 			</div>
 			<div class="portlet-content" style="visibility:hidden"></div>
 		</div>

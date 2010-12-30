@@ -2,6 +2,7 @@
  * código aplicativo da tela inicial
  */
 (function() {
+	/* apply main transformation */
 	$("#topo").xslTransform({
 		urlxml : "staticdata/menu-headers.xml",
 		urlxsl : "templates/menu-headers.xsl",
@@ -15,8 +16,8 @@
 							width : "70%",
 							height : "90%"
 						}).find(".portlet-content").xslTransform({
-							urlxsl : "templates/content.xsl",
-							urlxml : $(this).find("a").attr("href")
+							urlxml : $(this).find("a")[0].href,
+							urlxsl : $(this).find("a")[1].href
 						}).css({
 							visibility : "visible"
 						});

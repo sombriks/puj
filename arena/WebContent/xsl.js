@@ -32,7 +32,7 @@
  * 
  */
 function XSL(oparam) {
-	
+
 	var self = this;
 	this.oparam = oparam || {};
 
@@ -41,7 +41,8 @@ function XSL(oparam) {
 		this.aplicar = function() {
 			if (!self.oparam.xml || !self.oparam.xsl)
 				throw new Error("sem estilo ou sem xml para processar");
-			self.oparam.dst.innerHTML = self.oparam.xml.transformNode(self.oparam.xsl);
+			self.oparam.dst.innerHTML = self.oparam.xml
+					.transformNode(self.oparam.xsl);
 			if (self.oparam.hook)
 				self.oparam.hook();
 		};
@@ -64,11 +65,12 @@ if (jQuery) {
 		$.fn.xslTransform = function(params) {
 			var self = this;
 			if (!params)
-				throw new Error("você deve informar: {urlxml, urlxsl}");
-			if (!params.urlxml)
-				throw new Error("informe urlxml");
-			if (!params.urlxsl)
-				throw new Error("informe urlxsl");
+				throw new Error("você deve informar: {urlxml|xml, urlxsl|xsl}");
+			if (!params.urlxml && !params.xml)
+				throw new Error("informe urlxml ou xml");
+			if (!params.urlxsl && !params.xsl)
+				throw new Error("informe urlxsl ou xsl");
+			/* model data */
 			var docs = {
 				xml : null,
 				xsl : null
@@ -97,8 +99,18 @@ if (jQuery) {
 					}
 				});
 			}
-			recupera(params.urlxml, "xml");
-			recupera(params.urlxsl, "xsl");
+			/* combining the xml and xsl on data model */
+			if (!params.xml)
+				recupera(params.urlxml, "xml");
+			else
+				docs.xml = params.xml;
+			if (!params.xsl)
+				recupera(params.urlxsl, "xsl");
+			else
+				docs.xsl = params.xsl;
+			/* already loaded, so let's rumble... */
+			if (params.xml && params.xsl)
+				quandoPronto();
 			return this;
 		};
 	})(jQuery);
