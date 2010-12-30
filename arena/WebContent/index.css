@@ -8,13 +8,13 @@
 	position:absolute;
 	top:6px;
 	left:250px;
+	display: block;
 }
 
 /* extracted from http://jqueryui.com/demos/sortable/portlets.html */
 .portlet {
 	margin: 0 1em 1em 0;
 	width:230px;
-	/*float: left;*/
 }
 
 .portlet-header {
@@ -29,6 +29,7 @@
 
 .portlet-content {
 	padding: 0.4em;
+	height: auto;
 }
 
 /* end- portlet support */

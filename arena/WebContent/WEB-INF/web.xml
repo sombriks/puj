@@ -17,6 +17,16 @@
 		<servlet-name>JAX-RS Servlet</servlet-name>
 		<url-pattern>/resource/*</url-pattern>
 	</servlet-mapping>
+	
+	<filter>
+		<filter-name>Compress</filter-name>
+		<filter-class>org.cejug.arenapuj.filter.GzipFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Compress</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
 	<resource-ref>
 		<res-ref-name>jdbc/arena-ds</res-ref-name>
 		<res-type>javax.sql.DataSource</res-type>

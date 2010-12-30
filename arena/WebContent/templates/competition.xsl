@@ -8,7 +8,7 @@
 	</xsl:template>
 	<xsl:template match="/">
 		<ul>
-			<xsl:apply-imports />
+			<xsl:apply-templates />
 		</ul>
 	</xsl:template>
 </xsl:stylesheet>

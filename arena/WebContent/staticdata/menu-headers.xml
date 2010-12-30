@@ -1,6 +1,6 @@
 <menu-header>
 	<opcao template="templates/content.xsl" uri="staticdata/inicio.xml">Início</opcao>
 	<opcao template="templates/competition.xsl" uri="resource/competition">Competições</opcao>
-	<opcao template="templates/content.xsl" uri="staticdata/xpto.xml">Participantes</opcao>
-	<opcao template="templates/content.xsl" uri="staticdata/xpto.xml">Patrocinadores</opcao>
+	<opcao template="templates/content.xsl" uri="staticdata/lorenipsum.xml">Participantes</opcao>
+	<opcao template="templates/content.xsl" uri="staticdata/lorenipsum.xml">Patrocinadores</opcao>
 </menu-header>
