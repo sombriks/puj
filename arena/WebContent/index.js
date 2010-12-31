@@ -36,6 +36,8 @@
 					}
 				});
 			});
+			/* estado inicial da tela */
+			$(".portlet .portlet-header:first").click();
 		}
 	});
 }());

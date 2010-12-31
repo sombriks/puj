@@ -6,4 +6,38 @@
 		regras, experimentar os trabalhos submetidos e também pode ver os
 		resultados das edições anteriores. 
 	</p>
+	<h2>Rápido Histórico</h2>
+	<p>
+		A competição foi idealizada pela comunidade
+		<a href="http://www.cejug.org/">cejug</a>
+		- Ceará Java User Group, para estimular o aprendizado da plataforma
+		java entre jovens estudantes de áreas afins. Os professores submetem
+		os trabalhos de conclusão de semestre elaborados por seus alunos e
+		estes são avaliados através de um sistema de
+		<a href="http://pt.wikipedia.org/wiki/Revis%C3%A3o_por_pares">peer-review</a>
+		onde professores, alunos e profissionais de mercado selecionados.
+	</p>
+	<p>
+		A competição é uma forma de aproximar o mercado e a academia, uma
+		forma de tentar diminuir barreiras e expor a realidade de cada uma das
+		esferas envolvidas.
+	</p>
+	<p>
+		Não há premiação em dinheiro no puj, mas recompensas que estimulem
+		ainda mais a busca por conhecimento.
+	</p>
+	<h2>Mais informações</h2>
+	<ul>
+		<li>
+			<a href="http://www.cejug.org/programas/premio-universitario-java/pug-2009/">
+				PUJ/PUG 2009 no cejug
+			</a>
+		</li>
+		<li>
+			<a href="http://kenai.com/projects/puj/pages/PUJ-BR">Repositório original no kenai</a>
+		</li>
+		<li>
+			<a href="https://puj.dev.java.net">Repositório novo hospedado no java.net</a>
+		</li>
+	</ul>
 </inicio>
