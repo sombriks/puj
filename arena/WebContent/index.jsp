@@ -23,7 +23,7 @@
 		<div id="topo" style="width:100%">
 			<!-- dynamic content goes here -->
 		</div>
-		<div id="showLoading"></div>
+		<div id="showLoading"><!-- visual response for XHR --></div>
 		<script type="text/javascript" src="index.js"></script>
 	</body>
 </html>
