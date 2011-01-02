@@ -1,0 +1,12 @@
+<Context>
+	<Resource 	auth="Container" 
+				type="javax.sql.DataSource" 
+				name="jdbc/arena-ds" 
+				url="jdbc:mysql://localhost/arena"
+				driverClassName="com.mysql.jdbc.Driver"
+				username="sa"
+				password="sa"
+				maxActive="5" 
+				maxWait="50" 
+				maxIdle="5"/>
+</Context>

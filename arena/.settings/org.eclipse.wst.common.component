@@ -3,6 +3,7 @@
     <wb-module deploy-name="arena">
         <wb-resource deploy-path="/" source-path="/WebContent"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/META-INF" source-path="/src/META-INF"/>
         <property name="context-root" value="arena"/>
         <property name="java-output-path" value="/arena/build/classes"/>
     </wb-module>
