@@ -2,8 +2,7 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="opcao">
-		<div
-			class="portlet portlet-reduced ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
+		<div class="portlet portlet-reduced ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
 			<div class="portlet-header ui-widget-header ui-corner-all">
 				<label>
 					<xsl:value-of select="." />
