@@ -19,7 +19,9 @@
 		<script type="text/javascript" src="carregamento.js"></script>
 	</head>
 	<body>
-		<a id="login" href="login.jsp">Login/Register</a>
+		<%if(request.getUserPrincipal() == null){ %>
+			<a id="login" href="login.jsp">Login/Register</a>
+		<%}%>
 		<div id="topo" style="width:100%">
 			<!-- dynamic content goes here -->
 		</div>

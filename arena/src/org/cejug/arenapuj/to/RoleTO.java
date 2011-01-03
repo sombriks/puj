@@ -1,14 +1,20 @@
 package org.cejug.arenapuj.to;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity
+@Entity(name = "ROLE")
 @XmlRootElement(name = "role")
 public class RoleTO {
+	
 	@Id
+	@Column(name="ID")
+	@GeneratedValue
 	private long id;
+	@Column(name="TITULO")
 	private String titulo;
 
 	public RoleTO() {

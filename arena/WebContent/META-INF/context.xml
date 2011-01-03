@@ -1,4 +1,12 @@
-<Context>
+<Context path="/arena">
+	<Realm 		className="org.apache.catalina.realm.DataSourceRealm" 
+				debug="99"
+   				dataSourceName="jdbc/arena-ds"
+   				userTable="USER" 
+   				userNameCol="NOME" 
+   				userCredCol="SENHA"
+   				userRoleTable="ROLE" 
+   				roleNameCol="TITULO"/>
 	<Resource 	auth="Container" 
 				type="javax.sql.DataSource" 
 				name="jdbc/arena-ds" 

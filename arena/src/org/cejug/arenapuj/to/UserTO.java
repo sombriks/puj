@@ -1,16 +1,24 @@
 package org.cejug.arenapuj.to;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity
+@Entity(name="USER")
 @XmlRootElement(name="user")
 public class UserTO {
 	
 	@Id
+	@Column(name="ID")
+	@GeneratedValue
 	private long id;
+	@Column(name="NOME")
 	private String nome;
+	@Column(name="SENHA")
+	private String senha;
+	
 
 	public UserTO(){}
 	
@@ -32,6 +40,14 @@ public class UserTO {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 	
  }
