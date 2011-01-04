@@ -20,8 +20,9 @@ public class AdvertisementTO {
 	public AdvertisementTO() {
 	}
 
-	public AdvertisementTO(String t) {
+	public AdvertisementTO(long i,String t) {
 		titulo = t;
+		id=i;
 	}
 
 	public String getTitulo() {

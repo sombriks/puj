@@ -9,19 +9,19 @@ import javax.persistence.EntityManager;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-import org.cejug.arenapuj.to.AdvertisementTO;
+import org.cejug.arenapuj.to.HomeworkTO;
 
-@Path("/ads")
-public class AdvertisementRcs {
+@Path("/homework")
+public class HomeworkRcs {
 
 	private ResourceBundle b = ResourceBundle//
-			.getBundle("org.cejug.arenapuj.resources.AdvertisementRcs");
+			.getBundle("org.cejug.arenapuj.resources.HomeworkRcs");
 
 	@GET
-	public List<AdvertisementTO> listAdvertisements() {
+	public List<HomeworkTO> listHomeworks() {
 		EntityManager em = EMUtil.getEntityManager();
-		List<AdvertisementTO> l = em.createQuery(b.getString("select"),//
-				AdvertisementTO.class).getResultList();
+		List<HomeworkTO> l = em.createQuery(b.getString("select"),//
+				HomeworkTO.class).getResultList();
 		return l;
 	}
 }

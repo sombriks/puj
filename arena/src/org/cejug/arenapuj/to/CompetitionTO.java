@@ -1,27 +1,32 @@
 package org.cejug.arenapuj.to;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity(name="COMPETITION")
+@Entity(name = "COMPETITION")
 @XmlRootElement(name = "competition")
 public class CompetitionTO {
-	
+
 	@Id
-	@Column(name="ID")
+	@Column(name = "ID")
 	@GeneratedValue
 	private long id;
-	@Column(name="NOME")
+	@Column(name = "NOME")
 	private String nome;
 
 	public CompetitionTO() {
 	}
 
-	public CompetitionTO(String n) {
+	public CompetitionTO(long i, String n) {
 		nome = n;
+		id = i;
 	}
 
 	public long getId() {
@@ -39,4 +44,5 @@ public class CompetitionTO {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 }
