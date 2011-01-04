@@ -5,6 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * isto representa um trabalho do puj
+ * @author sombriks
+ *
+ */
 @Entity(name = "HOMEWORK")
 @XmlRootElement(name = "homework")
 public class HomeworkTO {

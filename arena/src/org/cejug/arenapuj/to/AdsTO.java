@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity(name="ADS")
 @XmlRootElement(name = "ads")
-public class AdvertisementTO {
+public class AdsTO {
 	
 	@Id
 	@Column(name="ID")
@@ -17,10 +17,10 @@ public class AdvertisementTO {
 	@Column(name="TITULO")
 	private String titulo;
 
-	public AdvertisementTO() {
+	public AdsTO() {
 	}
 
-	public AdvertisementTO(long i,String t) {
+	public AdsTO(long i,String t) {
 		titulo = t;
 		id=i;
 	}

@@ -4,9 +4,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * isto representa um usuário. Ele pode ser qualquer agente externo que use o
+ * sistema: desde um aluno até um colégio, ou mesmo um patrocinador.
+ * 
+ * @author sombriks
+ * 
+ */
 @Entity(name = "USER")
 @XmlRootElement(name = "user")
 public class UserTO {
@@ -23,9 +29,6 @@ public class UserTO {
 	private String email;
 	@Column(name = "ATIVO")
 	private boolean ativo;
-
-	@JoinColumn(name = "ROLE_ID")
-	private RoleTO role;
 
 	public UserTO() {
 	}
@@ -77,14 +80,6 @@ public class UserTO {
 
 	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
-	}
-
-	public RoleTO getRole() {
-		return role;
-	}
-
-	public void setRole(RoleTO role) {
-		this.role = role;
 	}
 
 }

@@ -10,6 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * isto representa um PUJ
+ * @author sombriks
+ *
+ */
 @Entity(name = "COMPETITION")
 @XmlRootElement(name = "competition")
 public class CompetitionTO {
@@ -20,6 +25,10 @@ public class CompetitionTO {
 	private long id;
 	@Column(name = "NOME")
 	private String nome;
+	@OneToMany(targetEntity=AdsTO.class)
+	private List<AdsTO>advertisement=new LinkedList<AdsTO>();
+	@OneToMany(targetEntity=HomeworkTO.class)
+	private List<HomeworkTO>homeworks=new LinkedList<HomeworkTO>();
 
 	public CompetitionTO() {
 	}
@@ -43,6 +52,22 @@ public class CompetitionTO {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public List<AdsTO> getAdvertisement() {
+		return advertisement;
+	}
+
+	public void setAdvertisement(List<AdsTO> advertisement) {
+		this.advertisement = advertisement;
+	}
+
+	public List<HomeworkTO> getHomeworks() {
+		return homeworks;
+	}
+
+	public void setHomeworks(List<HomeworkTO> homeworks) {
+		this.homeworks = homeworks;
 	}
 
 }
