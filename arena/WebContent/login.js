@@ -10,6 +10,9 @@ var usuario = dadoslogin[0];
 var senha = dadoslogin[1];
 
 $("#t1 button").click(function() {
+	//limpar label de status
+	$("#t1 div").removeClass("ui-state-highlight")//
+	.removeClass("ui-corner-all").text("");
 	var usr = "<user>" + //
 	"<nome>" + usuario.value + "</nome>" + //
 	"<senha>" + senha.value + "</senha>" + //
@@ -20,8 +23,12 @@ $("#t1 button").click(function() {
 		processData : false,
 		contentType : "text/xml",
 		url : "resource/user/login",
-		callback : function() {
-			alert("haaa")
+		success : function() {
+			window.location.href = "index.jsp";
+		},
+		error : function(req, errType, ex) {
+			$("#t1 div").addClass("ui-state-highlight")//
+			.addClass("ui-corner-all").text("Login incorreto");
 		}
 	});
 });
@@ -37,7 +44,14 @@ $("#t2 button").click(function() {
 		processData : false,
 		url : "resource/user",
 		data : usuario,
-		type : "POST"
+		type : "POST",
+		success : function() {
+			window.location.href = "index.jsp";
+		},
+		error : function(req, errType, ex) {
+			$("#t1 div").addClass("ui-state-highlight")//
+			.addClass("ui-corner-all").text("Login incorreto");
+		}
 	});
 });
 // criando as abas automagicamente

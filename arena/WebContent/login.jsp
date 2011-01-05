@@ -26,32 +26,34 @@
 				<li><a href="#t2">Registrar</a></li>
 			</ul>
 			<div id="t1">
+				<div></div>
 				<fieldset class="ui-widget-content ui-corner-all">
-					<legend class="ui-widget-header ui-corner-all">usuário</legend>
-					<input/>&nbsp;<span></span>
+					<legend class="ui-widget-header ui-corner-all">login</legend>
+					<input/>
 				</fieldset>
 				<fieldset class="ui-widget-content ui-corner-all">
 					<legend class="ui-widget-header ui-corner-all">senha</legend>
-					<input type="password"/>&nbsp;<span></span>
+					<input type="password"/>
 				</fieldset>
 				<button>Enviar</button>
 			</div>
 			<div id="t2">
+				<div></div>
 				<fieldset class="ui-widget-content ui-corner-all">
-					<legend class="ui-widget-header ui-corner-all">usuário</legend>
-					<input/>&nbsp;<span></span>
+					<legend class="ui-widget-header ui-corner-all">login</legend>
+					<input/>
 				</fieldset>
 				<fieldset class="ui-widget-content ui-corner-all">
 					<legend class="ui-widget-header ui-corner-all">email</legend>
-					<input/>&nbsp;<span></span>
+					<input/>
 				</fieldset>
 				<fieldset class="ui-widget-content ui-corner-all">
 					<legend class="ui-widget-header ui-corner-all">senha</legend>
-					<input type="password"/>&nbsp;<span></span>
+					<input type="password"/>
 				</fieldset>
 				<fieldset class="ui-widget-content ui-corner-all">
 					<legend class="ui-widget-header ui-corner-all">confirma senha</legend>
-					<input type="password"/>&nbsp;<span></span>
+					<input type="password"/>
 				</fieldset>
 				<button>Enviar</button>
 			</div>

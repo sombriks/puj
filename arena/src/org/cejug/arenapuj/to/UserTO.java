@@ -4,7 +4,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import org.cejug.arenapuj.util.MD5Util;
 
 /**
  * isto representa um usuário. Ele pode ser qualquer agente externo que use o
@@ -21,7 +24,7 @@ public class UserTO {
 	@Column(name = "ID")
 	@GeneratedValue
 	private long id;
-	@Column(name = "NOME")
+	@Column(name = "NOME", unique = true)
 	private String nome;
 	@Column(name = "SENHA")
 	private String senha;
@@ -29,6 +32,8 @@ public class UserTO {
 	private String email;
 	@Column(name = "ATIVO")
 	private boolean ativo;
+	@Transient
+	private String mailHex;
 
 	public UserTO() {
 	}
@@ -42,8 +47,17 @@ public class UserTO {
 		id = i;
 	}
 
+	public UserTO(long i, String n, String m, Boolean h) {
+		nome = n;
+		id = i;
+		if (h)
+			mailHex = MD5Util.md5Hex(m);
+		else
+			email = m;
+	}
+
 	public UserTO(long i) {
-		id=i;
+		id = i;
 	}
 
 	public long getId() {
@@ -84,6 +98,14 @@ public class UserTO {
 
 	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
+	}
+
+	public String getMailHex() {
+		return mailHex;
+	}
+
+	public void setMailHex(String mailHex) {
+		this.mailHex = mailHex;
 	}
 
 }

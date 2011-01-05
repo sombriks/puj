@@ -20,17 +20,19 @@
 		<script type="text/javascript" src="carregamento.js"></script>
 	</head>
 	<body>
-		<%UserTO user = (UserTO) request.getSession().getAttribute("user");
-		if(user == null){%>
-			<a id="login" href="login.jsp">Login/Register</a>
-		<%}else{%>
-			<a id="login" href="logout.jsp">Logout(<%=user.getNome()%>)</a>
-		<%}%>
-		
 		<div id="topo" style="width:100%">
 			<!-- dynamic content goes here -->
 		</div>
 		<div id="showLoading"><!-- visual response for XHR --></div>
 		<script type="text/javascript" src="index.js"></script>
+		<%UserTO user = (UserTO) request.getSession().getAttribute("user");
+		if(user == null){%>
+			<a id="login" href="login.jsp">Login/Register</a>
+		<%}else{%>
+			<a id="login" href="logout.jsp">Logout(<%=user.getNome()%>)</a>
+			<%if("soneca".equals(user.getNome())){%>
+				
+			<%}%>
+		<%}%>
 	</body>
 </html>
