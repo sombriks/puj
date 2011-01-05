@@ -4,25 +4,37 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.persistence.ManyToOne;
 
-@Entity(name="ADS")
+@Entity(name = "ADS")
 @XmlRootElement(name = "ads")
 public class AdsTO {
-	
+
 	@Id
-	@Column(name="ID")
+	@Column(name = "ID")
 	@GeneratedValue
 	private long id;
-	@Column(name="TITULO")
+	@Column(name = "TITULO")
 	private String titulo;
+
+	@ManyToOne
+	@JoinColumn(name = "USER_ID")
+	private UserTO user;
 
 	public AdsTO() {
 	}
 
-	public AdsTO(long i,String t) {
+	public AdsTO(long i, String t) {
 		titulo = t;
-		id=i;
+		id = i;
+	}
+
+	public AdsTO(long i, String t, UserTO u) {
+		titulo = t;
+		id = i;
+		user = u;
 	}
 
 	public String getTitulo() {
@@ -39,6 +51,14 @@ public class AdsTO {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public UserTO getUser() {
+		return user;
+	}
+
+	public void setUser(UserTO user) {
+		this.user = user;
 	}
 
 }

@@ -42,6 +42,10 @@ public class UserTO {
 		id = i;
 	}
 
+	public UserTO(long i) {
+		id=i;
+	}
+
 	public long getId() {
 		return id;
 	}

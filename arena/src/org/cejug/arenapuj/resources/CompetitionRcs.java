@@ -22,6 +22,7 @@ public class CompetitionRcs {
 		EntityManager em = EMUtil.getEntityManager();
 		List<CompetitionTO> l = em.createQuery(b.getString("select"),//
 				CompetitionTO.class).getResultList();
+		em.close();
 		return l;
 	}
 

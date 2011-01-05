@@ -22,6 +22,7 @@ public class AdsRcs {
 		EntityManager em = EMUtil.getEntityManager();
 		List<AdsTO> l = em.createQuery(b.getString("select"),//
 				AdsTO.class).getResultList();
+		em.close();
 		return l;
 	}
 }

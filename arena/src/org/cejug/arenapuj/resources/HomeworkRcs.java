@@ -22,6 +22,7 @@ public class HomeworkRcs {
 		EntityManager em = EMUtil.getEntityManager();
 		List<HomeworkTO> l = em.createQuery(b.getString("select"),//
 				HomeworkTO.class).getResultList();
+		em.close();
 		return l;
 	}
 }

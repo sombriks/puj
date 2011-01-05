@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page import="org.cejug.arenapuj.to.UserTO"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -19,9 +20,13 @@
 		<script type="text/javascript" src="carregamento.js"></script>
 	</head>
 	<body>
-		<%if(request.getUserPrincipal() == null){ %>
+		<%UserTO user = (UserTO) request.getSession().getAttribute("user");
+		if(user == null){%>
 			<a id="login" href="login.jsp">Login/Register</a>
+		<%}else{%>
+			<a id="login" href="logout.jsp">Logout(<%=user.getNome()%>)</a>
 		<%}%>
+		
 		<div id="topo" style="width:100%">
 			<!-- dynamic content goes here -->
 		</div>

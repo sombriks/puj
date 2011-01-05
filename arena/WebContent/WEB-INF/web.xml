@@ -22,9 +22,32 @@
 		<filter-name>Compress</filter-name>
 		<filter-class>org.cejug.arenapuj.filter.GzipFilter</filter-class>
 	</filter>
+	<filter>
+		<description>
+		</description>
+		<display-name>UserFilter</display-name>
+		<filter-name>UserFilter</filter-name>
+		<filter-class>org.cejug.arenapuj.filter.UserFilter</filter-class>
+	</filter>
 	<filter-mapping>
 		<filter-name>Compress</filter-name>
 		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>UserFilter</filter-name>
+		<url-pattern>/resource/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>UserFilter</filter-name>
+		<url-pattern>/soneca.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
 	</filter-mapping>
 
 	<session-config>

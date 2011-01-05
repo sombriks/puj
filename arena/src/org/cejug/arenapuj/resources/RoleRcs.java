@@ -22,6 +22,7 @@ public class RoleRcs {
 		EntityManager em = EMUtil.getEntityManager();
 		List<RoleTO> l = em.createQuery(b.getString("select"), RoleTO.class)//
 				.getResultList();
+		em.close();
 		return l;
 	}
 }

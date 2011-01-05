@@ -1,14 +1,20 @@
 package org.cejug.arenapuj.to;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * isto representa um trabalho do puj
+ * 
  * @author sombriks
- *
+ * 
  */
 @Entity(name = "HOMEWORK")
 @XmlRootElement(name = "homework")
@@ -19,6 +25,9 @@ public class HomeworkTO {
 	private long id;
 	@Column(name = "TITULO")
 	private String titulo;
+	@OneToMany
+	@JoinColumn(name = "USER_ID")
+	private List<UserTO> users = new LinkedList<UserTO>();
 
 	public HomeworkTO() {
 	}
@@ -42,6 +51,14 @@ public class HomeworkTO {
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
+	}
+
+	public List<UserTO> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<UserTO> users) {
+		this.users = users;
 	}
 
 }
