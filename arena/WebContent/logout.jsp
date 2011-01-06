@@ -20,24 +20,16 @@
 		<script type="text/javascript" src="ui/jquery.ui.dialog.js"></script>
 		<script type="text/javascript" src="ui/jquery.effects.core.js"></script>
 		<!-- END jQuery support -->
-		<style type="text/css">
-			#titulo{
-				font-size:xx-large;
-				position:absolute;
-				top:33%;
-				left:35%;
-				width:200px;
-			}
-		</style>
 	</head>
 	<body>
 		<%
 			request.getSession().removeAttribute("user");
 		%>
-		<div id="titulo" class="ui-widget ui-state-highlight ui-corner-all">
-			<center>Logout</center>
+		<div id="titulo" title="LOGOUT">
+			<p>Você será redirecionado em breve...</p>
 		</div>
 		<script type="text/javascript">
+			$("#titulo").dialog();
 			setTimeout(function(){
 				window.location.href="index.jsp";
 			},3000);

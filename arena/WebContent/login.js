@@ -10,7 +10,7 @@ var usuario = dadoslogin[0];
 var senha = dadoslogin[1];
 
 $("#inicio").button();
-
+$("button").button();
 $("#t1 button").click(function() {
 	//limpar label de status
 	$("#t1 div").removeClass("ui-state-highlight")//

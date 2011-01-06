@@ -21,8 +21,13 @@
 		<script type="text/javascript" src="ui/jquery.ui.dialog.js"></script>
 		<script type="text/javascript" src="ui/jquery.effects.core.js"></script>
 		<!-- END jQuery support -->
+		<link rel="stylesheet" href="soneca.css"/>
 	</head>
 	<body>
-	
+		<div id="lado">
+			<a>Cria PUG</a>
+		</div>
+		<div id="centro"></div>
+		<script type="text/javascript" src="soneca.js"></script>
 	</body>
 </html>
