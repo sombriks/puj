@@ -37,7 +37,7 @@
 				if(user == null){%>
 					<a href="login.jsp">Login/Register</a>
 				<%}else{%>
-					<a href="joinpuj.jsp">Participar do PUG</a>
+					<a href="puj.jsp">Participar do PUG</a>
 					<!-- finally -->					
 					<a href="logout.jsp">Logout(<%=user.getNome()%>)</a>
 				<%if("soneca".equals(user.getNome())){%>

@@ -25,14 +25,16 @@
 		<script type="text/javascript" src="carregamento.js"></script>
 	</head>
 	<body>
-		<a id="inicio" href="index.jsp">Início</a>
-		<div id="abas" style="width:600px">
+		<div id="lado">
+			<a id="inicio" href="index.jsp">Voltar</a>
+		</div>
+		<div id="centro">
 			<ul>
 				<li><a href="#t1">Login</a></li>
 				<li><a href="#t2">Registrar</a></li>
 			</ul>
 			<div id="t1">
-				<div></div>
+				<p></p>
 				<fieldset class="ui-widget-content ui-corner-all">
 					<legend class="ui-widget-header ui-corner-all">login</legend>
 					<input/>
@@ -44,7 +46,7 @@
 				<button>Enviar</button>
 			</div>
 			<div id="t2">
-				<div></div>
+				<p></p>
 				<fieldset class="ui-widget-content ui-corner-all">
 					<legend class="ui-widget-header ui-corner-all">login</legend>
 					<input/>

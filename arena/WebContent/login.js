@@ -29,7 +29,7 @@ $("#t1 button").click(function() {
 			window.location.href = "index.jsp";
 		},
 		error : function(req, errType, ex) {
-			$("#t1 div").addClass("ui-state-highlight")//
+			$("#t1 p").addClass("ui-state-highlight")//
 			.addClass("ui-corner-all").text("Login incorreto");
 		}
 	});
@@ -52,10 +52,10 @@ $("#t2 button").click(function() {
 			window.location.href = "index.jsp";
 		},
 		error : function(req, errType, ex) {
-			$("#t1 div").addClass("ui-state-highlight")//
+			$("#t2 p").addClass("ui-state-highlight")//
 			.addClass("ui-corner-all").text("Login incorreto");
 		}
 	});
 });
 // criando as abas automagicamente
-$("#abas").tabs();
+$("#centro").tabs();

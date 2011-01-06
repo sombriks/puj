@@ -11,6 +11,7 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="/">
+		<h1>Participantes de todas as edições do PUG</h1>
 		<xsl:apply-templates/>	
 	</xsl:template>
 </xsl:stylesheet>

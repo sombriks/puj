@@ -29,7 +29,9 @@ public class CompetitionTO {
 	private List<AdsTO>advertisement=new LinkedList<AdsTO>();
 	@OneToMany(targetEntity=HomeworkTO.class)
 	private List<HomeworkTO>homeworks=new LinkedList<HomeworkTO>();
-
+	@Column(name="ATIVA")
+	private boolean ativa;
+	
 	public CompetitionTO() {
 	}
 
@@ -68,6 +70,14 @@ public class CompetitionTO {
 
 	public void setHomeworks(List<HomeworkTO> homeworks) {
 		this.homeworks = homeworks;
+	}
+
+	public boolean isAtiva() {
+		return ativa;
+	}
+
+	public void setAtiva(boolean ativa) {
+		this.ativa = ativa;
 	}
 
 }
