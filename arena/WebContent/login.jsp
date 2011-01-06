@@ -12,7 +12,13 @@
 		<script type="text/javascript" src="ui/jquery.ui.widget.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.tabs.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.mouse.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.button.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.sortable.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.draggable.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.resizable.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.dialog.js"></script>
+		<script type="text/javascript" src="ui/jquery.effects.core.js"></script>
 		<!-- END jQuery support -->
 		<link rel="stylesheet" href="carregamento.css"/>
 		<link rel="stylesheet" href="login.css"/>

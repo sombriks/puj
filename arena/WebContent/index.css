@@ -4,42 +4,19 @@
 	right: 10px;
 	z-index: 999;
 }
-
-.destaque {
+#lado{
+	width:200px;
+}
+#lado>a{
+	width:195px;
+	margin:5px;
+}
+#centro{
 	position:absolute;
-	top:6px;
-	left:250px;
-	display: block;
-}
-
-/* extracted from http://jqueryui.com/demos/sortable/portlets.html */
-.portlet {
-	margin: 0 1em 1em 0;
-	width:230px;
-}
-
-.portlet-header {
-	margin: 0.3em;
-	padding-bottom: 4px;
-	padding-left: 0.2em;
-}
-
-.portlet-header .ui-icon {
-	float: right;
-}
-
-.portlet-content {
-	padding: 0.4em;
-	height: auto;
-}
-
-/* end- portlet support */
-.ui-sortable-placeholder {
-	border: 1px dotted black;
-	visibility: visible !important;
-	height: 50px !important;
-}
-
-.ui-sortable-placeholder * {
-	visibility: hidden;
+	top:5px;
+	left:210px;
+	width:70%;
+	overflow: auto;
+	margin:5px;
+	padding:5px;
 }

@@ -108,4 +108,8 @@ public class UserTO {
 		this.mailHex = mailHex;
 	}
 
+	public void validar() throws Exception{
+		if(senha==null ||"".equals(senha.trim()))
+			throw new Exception("informe senha");
+	}
 }

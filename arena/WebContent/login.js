@@ -9,6 +9,8 @@ var confirmaReg = dadosregister[3];
 var usuario = dadoslogin[0];
 var senha = dadoslogin[1];
 
+$("#inicio").button();
+
 $("#t1 button").click(function() {
 	//limpar label de status
 	$("#t1 div").removeClass("ui-state-highlight")//
@@ -46,6 +48,7 @@ $("#t2 button").click(function() {
 		data : usuario,
 		type : "POST",
 		success : function() {
+			alert("sucesso, um email de confirmação será enviado a você");
 			window.location.href = "index.jsp";
 		},
 		error : function(req, errType, ex) {

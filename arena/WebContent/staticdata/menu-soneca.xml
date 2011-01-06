@@ -1,6 +1,0 @@
-<menu-header>
-	<opcao template="templates/content.xsl" uri="staticdata/criapug.xml">Criar PUG</opcao>
-	<opcao template="templates/competition.xsl" uri="staticdata/criauser.xml">Criar usuário</opcao>
-	<opcao template="templates/content.xsl" uri="staticdata/lorenipsum.xml">Criar Propaganda</opcao>
-	<opcao template="templates/content.xsl" uri="staticdata/lorenipsum.xml">Criar Trabalho</opcao>
-</menu-header>

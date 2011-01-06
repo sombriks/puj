@@ -11,8 +11,15 @@
 		<script type="text/javascript" src="jquery-1.4.4.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.core.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.tabs.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.mouse.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.button.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.sortable.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.draggable.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.resizable.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.dialog.js"></script>
+		<script type="text/javascript" src="ui/jquery.effects.core.js"></script>
 		<!-- END jQuery support -->
 		<link rel="stylesheet" href="index.css"/>
 		<link rel="stylesheet" href="carregamento.css"/>
@@ -20,19 +27,26 @@
 		<script type="text/javascript" src="carregamento.js"></script>
 	</head>
 	<body>
-		<div id="topo" style="width:100%">
-			<!-- dynamic content goes here -->
-		</div>
-		<div id="showLoading"><!-- visual response for XHR --></div>
-		<script type="text/javascript" src="index.js"></script>
-		<%UserTO user = (UserTO) request.getSession().getAttribute("user");
-		if(user == null){%>
-			<a id="login" href="login.jsp">Login/Register</a>
-		<%}else{%>
-			<a id="login" href="logout.jsp">Logout(<%=user.getNome()%>)</a>
-			<%if("soneca".equals(user.getNome())){%>
-				
+		<div id="lado">
+			<!-- subvertendo o uso dos href's -->
+			<a href="#[staticdata/inicio.xml,templates/content.xsl]">Início</a><br/>
+			<a href="#[resource/user,templates/users.xsl]">Participantes</a><br/>
+			<a href="#[resource/competition,templates/competition.xsl]">Competições</a><br/>
+			<!-- auth -->
+			<%UserTO user = (UserTO) request.getSession().getAttribute("user");
+				if(user == null){%>
+					<a href="login.jsp">Login/Register</a>
+				<%}else{%>
+					<a href="joinpuj.jsp">Participar do PUG</a>
+					<!-- finally -->					
+					<a href="logout.jsp">Logout(<%=user.getNome()%>)</a>
+				<%if("soneca".equals(user.getNome())){%>
+					<a href="soneca.jsp">Área administrativa</a>
+				<%}%>
 			<%}%>
-		<%}%>
+		</div>
+		<div id="centro" class="ui-widget-content ui-corner-all"><!-- dynamic content goes here --></div>
+		<div id="showLoading" style="display:none"><!-- visual response for XHR --></div>
+		<script type="text/javascript" src="index.js"></script>
 	</body>
 </html>
