@@ -33,13 +33,18 @@ public class UserRcs {
 	}
 
 	@POST
-	public void addUser(UserTO newuser) {
+	public void addUser(UserTO newuser) throws Exception {
 		EntityManager em = EMUtil.getEntityManager();
 		// resource local, :(
 		EntityTransaction tran = em.getTransaction();
 		tran.begin();
-		em.persist(newuser);
-		tran.commit();
+		long count = em.createQuery(b.getString("bynome"), Long.class)//
+				.setParameter("nome", newuser.getNome()).getSingleResult();
+		if (count == 0) {
+			em.persist(newuser);
+			tran.commit();
+		} else
+			throw new Exception("[Um usuário com este nome já existe]");
 		em.close();
 	}
 

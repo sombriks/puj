@@ -29,6 +29,7 @@ $("#t1 button").click(function() {
 			window.location.href = "index.jsp";
 		},
 		error : function(req, errType, ex) {
+			alert(req.responseXML.getElementsByTagName("message")[0].textContent);
 			$("#t1 p").addClass("ui-state-highlight")//
 			.addClass("ui-corner-all").text("Login incorreto");
 		}
@@ -52,8 +53,11 @@ $("#t2 button").click(function() {
 			window.location.href = "index.jsp";
 		},
 		error : function(req, errType, ex) {
+			var erro = req.responseXML;
+			erro = erro.getElementsByTagName("message");
+			erro = erro[0].textContent;
 			$("#t2 p").addClass("ui-state-highlight")//
-			.addClass("ui-corner-all").text("Login incorreto");
+			.addClass("ui-corner-all").text(erro);
 		}
 	});
 });

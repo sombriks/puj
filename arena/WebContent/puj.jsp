@@ -21,16 +21,17 @@
 		<script type="text/javascript" src="ui/jquery.effects.core.js"></script>
 		<!-- END jQuery support -->
 		<link rel="stylesheet" href="puj.css"/>
+		<script type="text/javascript" src="xsl.js"></script>
 	</head>
 	<body>
 		<div id="lado">
-			<a>Inscrever-se</a>
-			<a>Submeter trabalho</a>
-			<a>Avaliar trabalhos</a>
-			<a>Adicionar propaganda</a>
+			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Inscrever-se</a>
+			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Submeter trabalho</a>
+			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Avaliar trabalhos</a>
+			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Criar propaganda</a>
 			<a href="index.jsp">Voltar</a>
 		</div>
-		<div id="centro"></div>
+		<div id="centro" class="ui-widget-content ui-corner-all"></div>
 		<script type="text/javascript" src="puj.js"></script>
 	</body>
 </html>

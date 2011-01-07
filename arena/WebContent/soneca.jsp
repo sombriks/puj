@@ -22,14 +22,17 @@
 		<script type="text/javascript" src="ui/jquery.effects.core.js"></script>
 		<!-- END jQuery support -->
 		<link rel="stylesheet" href="soneca.css"/>
+		<script type="text/javascript" src="xsl.js"></script>
 	</head>
 	<body>
 		<div id="lado">
-			<a>Cria PUG</a>
-			<a href="puj.jsp">Ver competições</a>
+			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Cria PUG</a>
+			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Ver competições</a>
+			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Propagandas pendentes</a>
+			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Inscrições pendentes</a>
 			<a href="index.jsp">Voltar</a>
 		</div>
-		<div id="centro"></div>
+		<div id="centro" class="ui-widget-content ui-corner-all"></div>
 		<script type="text/javascript" src="soneca.js"></script>
 	</body>
 </html>
