@@ -13,7 +13,7 @@ $("#inicio").button();
 $("button").button();
 $("#t1 button").click(function() {
 	//limpar label de status
-	$("#t1 div").removeClass("ui-state-highlight")//
+	$("#t1 .status").removeClass("ui-state-highlight")//
 	.removeClass("ui-corner-all").text("");
 	var usr = "<user>" + //
 	"<nome>" + usuario.value + "</nome>" + //
@@ -29,13 +29,18 @@ $("#t1 button").click(function() {
 			window.location.href = "index.jsp";
 		},
 		error : function(req, errType, ex) {
-			alert(req.responseXML.getElementsByTagName("message")[0].textContent);
-			$("#t1 p").addClass("ui-state-highlight")//
-			.addClass("ui-corner-all").text("Login incorreto");
+			var erro = req.responseXML;
+			erro = erro.getElementsByTagName("message");
+			erro = erro[0].textContent;
+			$("#t1 .status").addClass("ui-state-highlight")//
+			.addClass("ui-corner-all").text(erro);
 		}
 	});
 });
 $("#t2 button").click(function() {
+	//limpar label de status
+	$("#t2 .status").removeClass("ui-state-highlight")//
+	.removeClass("ui-corner-all").text("");
 	// modo sujo e rápido de postar xml -- o rootelement é importante
 	var usuario = "<user>" + //
 	"<nome>" + usuarioReg.value + "</nome>" + //
@@ -56,7 +61,7 @@ $("#t2 button").click(function() {
 			var erro = req.responseXML;
 			erro = erro.getElementsByTagName("message");
 			erro = erro[0].textContent;
-			$("#t2 p").addClass("ui-state-highlight")//
+			$("#t2 .status").addClass("ui-state-highlight")//
 			.addClass("ui-corner-all").text(erro);
 		}
 	});

@@ -1,5 +1,6 @@
 package org.cejug.arenapuj.to;
 
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -8,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -23,7 +26,7 @@ public class CompetitionTO {
 	@Column(name = "ID")
 	@GeneratedValue
 	private long id;
-	@Column(name = "NOME")
+	@Column(name = "NOME", unique = true)
 	private String nome;
 	@OneToMany(targetEntity=AdsTO.class)
 	private List<AdsTO>advertisement=new LinkedList<AdsTO>();
@@ -31,6 +34,9 @@ public class CompetitionTO {
 	private List<HomeworkTO>homeworks=new LinkedList<HomeworkTO>();
 	@Column(name="ATIVA")
 	private boolean ativa;
+	@Temporal(TemporalType.DATE)
+	@Column(name="DT_CADASTRO")
+	private Date dtCadastro;
 	
 	public CompetitionTO() {
 	}
@@ -78,6 +84,14 @@ public class CompetitionTO {
 
 	public void setAtiva(boolean ativa) {
 		this.ativa = ativa;
+	}
+
+	public Date getDtCadastro() {
+		return dtCadastro;
+	}
+
+	public void setDtCadastro(Date dtCadastro) {
+		this.dtCadastro = dtCadastro;
 	}
 
 }

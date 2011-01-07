@@ -16,20 +16,19 @@
 				<li><a href="#x1">Novo PUG</a></li>
 			</ul>
 			<div id="x1">
-				<fieldset>
-					<legend>Versão</legend>
+				<p class="status"></p>
+				<fieldset class="ui-widget-content ui-corner-all">
+					<legend class="ui-widget-header ui-corner-all">Versão</legend>
 					<input/>
 				</fieldset>
-				<fieldset>
-					<legend>Ativo</legend>
+				<fieldset class="ui-widget-content ui-corner-all">
+					<legend class="ui-widget-header ui-corner-all">Ativo</legend>
 					<input type="checkbox"/>
 				</fieldset>
-				<p><button>Limpar</button><button>Salvar</button></p>
+				<p><button class="limpar">Limpar</button><button class="salvar">Salvar</button></p>
 			</div>
 		</div>
-		<script type="text/javascript">
-			$("#form").tabs().find("button").button();
-		</script>
+		<script type="text/javascript" src="templates/criapug.js"></script>
 		<h1>PUG's criados</h1>
 		<p>
 			<xsl:apply-templates select="competition" />

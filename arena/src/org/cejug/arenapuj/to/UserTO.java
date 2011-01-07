@@ -1,9 +1,13 @@
 package org.cejug.arenapuj.to;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -32,6 +36,9 @@ public class UserTO {
 	private String email;
 	@Column(name = "ATIVO")
 	private boolean ativo;
+	@Temporal(TemporalType.DATE)
+	@Column(name="DT_CADASTRO")
+	private Date dtCadastro;
 	@Transient
 	private String mailHex;
 
@@ -112,4 +119,13 @@ public class UserTO {
 		if(senha==null ||"".equals(senha.trim()))
 			throw new Exception("informe senha");
 	}
+
+	public Date getDtCadastro() {
+		return dtCadastro;
+	}
+
+	public void setDtCadastro(Date dtCadastro) {
+		this.dtCadastro = dtCadastro;
+	}
+	
 }

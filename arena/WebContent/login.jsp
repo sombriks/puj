@@ -34,7 +34,7 @@
 				<li><a href="#t2">Registrar</a></li>
 			</ul>
 			<div id="t1">
-				<p></p>
+				<p class="status"></p>
 				<fieldset class="ui-widget-content ui-corner-all">
 					<legend class="ui-widget-header ui-corner-all">login</legend>
 					<input/>
@@ -48,7 +48,7 @@
 				</p>
 			</div>
 			<div id="t2">
-				<p></p>
+				<p class="status"></p>
 				<fieldset class="ui-widget-content ui-corner-all">
 					<legend class="ui-widget-header ui-corner-all">login</legend>
 					<input/>

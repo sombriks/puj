@@ -2,6 +2,7 @@ package org.cejug.arenapuj.resources;
 
 import static org.cejug.arenapuj.util.EMUtil.EMUtil;
 
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -41,6 +42,7 @@ public class UserRcs {
 		long count = em.createQuery(b.getString("bynome"), Long.class)//
 				.setParameter("nome", newuser.getNome()).getSingleResult();
 		if (count == 0) {
+			newuser.setDtCadastro(new Date());
 			em.persist(newuser);
 			tran.commit();
 		} else
