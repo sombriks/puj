@@ -26,7 +26,7 @@
 	</head>
 	<body>
 		<div id="lado">
-			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Cria PUG</a>
+			<a href="#[resource/competition,templates/criapug.xsl]">Cria PUG</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Ver competições</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Propagandas pendentes</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Inscrições pendentes</a>

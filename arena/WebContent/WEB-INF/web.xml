@@ -47,7 +47,7 @@
 	</filter-mapping>
 	<filter-mapping>
 		<filter-name>UserFilter</filter-name>
-		<url-pattern>/soneca.jsp</url-pattern>
+		<url-pattern>*.jsp</url-pattern>
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher>
 		<dispatcher>INCLUDE</dispatcher>

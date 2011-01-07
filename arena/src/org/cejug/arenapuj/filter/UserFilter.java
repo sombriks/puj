@@ -28,7 +28,8 @@ public class UserFilter implements Filter {
 		UserTO user = (UserTO) req.getSession().getAttribute("user");
 
 		if (user == null) {
-			if (req.getRequestURI().indexOf("/soneca.jsp") > -1) {
+			if (req.getRequestURI().indexOf("/soneca.jsp") > -1 ||
+					req.getRequestURI().indexOf("/puj.jsp") > -1 ) {
 				request.getRequestDispatcher("/login.jsp")//
 						.forward(request, response);
 			}

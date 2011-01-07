@@ -43,7 +43,9 @@
 					<legend class="ui-widget-header ui-corner-all">senha</legend>
 					<input type="password"/>
 				</fieldset>
-				<button>Enviar</button>
+				<p>
+					<button>Enviar</button>
+				</p>
 			</div>
 			<div id="t2">
 				<p></p>
@@ -63,7 +65,9 @@
 					<legend class="ui-widget-header ui-corner-all">confirma senha</legend>
 					<input type="password"/>
 				</fieldset>
-				<button>Enviar</button>
+				<p>
+					<button>Cadastrar</button>
+				</p>
 			</div>
 		</div>
 		<div style="display:none" id="showLoading"><!-- visual response for XHR --></div>
