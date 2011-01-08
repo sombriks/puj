@@ -25,7 +25,7 @@
 	</head>
 	<body>
 		<div id="lado">
-			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Inscrever-se</a>
+			<a href="#[resource/competition,templates/joinpug.xsl]">Inscrever-se</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Submeter trabalho</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Avaliar trabalhos</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Criar propaganda</a>
