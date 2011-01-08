@@ -31,7 +31,7 @@
 			<!-- subvertendo o uso dos href's -->
 			<a href="#[staticdata/inicio.xml,templates/content.xsl]">Início</a><br/>
 			<a href="#[resource/user,templates/users.xsl]">Participantes</a><br/>
-			<a href="#[resource/competition,templates/showcompetition.xsl]">Competições</a><br/>
+			<a href="#[resource/competition,templates/listapug.xsl]">Competições</a><br/>
 			<!-- auth -->
 			<%UserTO user = (UserTO) request.getSession().getAttribute("user");
 				if(user == null){%>
