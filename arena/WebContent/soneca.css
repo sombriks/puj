@@ -1,16 +1,24 @@
-#lado{
-	width:200px;
+#lado {
+	width: 200px;
 }
-#lado>a{
-	width:195px;
-	margin:5px;
+
+#lado>a {
+	width: 195px;
+	margin: 5px;
 }
-#centro{
-	position:absolute;
-	top:5px;
-	left:210px;
-	width:70%;
+
+#centro {
+	position: absolute;
+	top: 5px;
+	left: 210px;
+	width: 70%;
 	overflow: auto;
-	margin:5px;
-	padding:5px;
+	margin: 5px;
+	padding: 5px;
+}
+
+.pugs {
+	margin: 5px;
+	float: left;
+	width:250px; 
 }
