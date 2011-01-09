@@ -22,6 +22,7 @@
 		<!-- END jQuery support -->
 		<link rel="stylesheet" href="puj.css"/>
 		<script type="text/javascript" src="xsl.js"></script>
+		<script type="text/javascript" src="xml.js"></script>
 	</head>
 	<body>
 		<div id="lado">
