@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@ page import="org.cejug.arenapuj.to.UserTO"%>
+<%
+	UserTO user = (UserTO) request.getSession().getAttribute("user");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -23,6 +27,10 @@
 		<link rel="stylesheet" href="puj.css"/>
 		<script type="text/javascript" src="xsl.js"></script>
 		<script type="text/javascript" src="xml.js"></script>
+		<script type="text/javascript">
+			//recuperando o usuário
+			var usuario = "<user><id><%=user.getId()%></id></user>";
+		</script>
 	</head>
 	<body>
 		<div id="lado">
