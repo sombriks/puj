@@ -30,6 +30,7 @@
 		<script type="text/javascript">
 			//recuperando o usuário
 			var usuario = "<user><id><%=user.getId()%></id></user>";
+			var competicao = "";
 		</script>
 	</head>
 	<body>
