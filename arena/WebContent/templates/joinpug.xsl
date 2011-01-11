@@ -8,9 +8,9 @@
 	</xsl:template>
 	<xsl:template match="/">
 		<h1>Selecione a competição:</h1>
-		<div id="pugsatuais">
+		<p id="pugsatuais">
 			<xsl:apply-templates />
-		</div>
+		</p>
 		<div id="formulario"></div>
 		<script type="text/javascript" src="templates/joinpug.js"></script>
 	</xsl:template>
