@@ -14,3 +14,6 @@
 	margin:5px;
 	padding:5px;
 }
+fieldset>div>span{
+	margin-left:4px;
+}

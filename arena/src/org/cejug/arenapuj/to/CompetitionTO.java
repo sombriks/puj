@@ -15,8 +15,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * isto representa um PUJ
+ * 
  * @author sombriks
- *
+ * 
  */
 @Entity(name = "COMPETITION")
 @XmlRootElement(name = "competition")
@@ -28,16 +29,16 @@ public class CompetitionTO {
 	private long id;
 	@Column(name = "NOME", unique = true)
 	private String nome;
-	@OneToMany(targetEntity=AdsTO.class)
-	private List<AdsTO>advertisement=new LinkedList<AdsTO>();
-	@OneToMany(targetEntity=HomeworkTO.class)
-	private List<HomeworkTO>homeworks=new LinkedList<HomeworkTO>();
-	@Column(name="ATIVA")
+	@Column(name = "ATIVA")
 	private boolean ativa;
 	@Temporal(TemporalType.DATE)
-	@Column(name="DT_CADASTRO")
+	@Column(name = "DT_CADASTRO")
 	private Date dtCadastro;
-	
+	@OneToMany(targetEntity = HomeworkTO.class)
+	private List<HomeworkTO> homeworks = new LinkedList<HomeworkTO>();
+	@OneToMany(targetEntity = AdsTO.class)
+	private List<AdsTO> advertisements = new LinkedList<AdsTO>();
+
 	public CompetitionTO() {
 	}
 
@@ -62,22 +63,6 @@ public class CompetitionTO {
 		this.nome = nome;
 	}
 
-	public List<AdsTO> getAdvertisement() {
-		return advertisement;
-	}
-
-	public void setAdvertisement(List<AdsTO> advertisement) {
-		this.advertisement = advertisement;
-	}
-
-	public List<HomeworkTO> getHomeworks() {
-		return homeworks;
-	}
-
-	public void setHomeworks(List<HomeworkTO> homeworks) {
-		this.homeworks = homeworks;
-	}
-
 	public boolean isAtiva() {
 		return ativa;
 	}
@@ -92,6 +77,22 @@ public class CompetitionTO {
 
 	public void setDtCadastro(Date dtCadastro) {
 		this.dtCadastro = dtCadastro;
+	}
+
+	public List<HomeworkTO> getHomeworks() {
+		return homeworks;
+	}
+
+	public void setHomeworks(List<HomeworkTO> homeworks) {
+		this.homeworks = homeworks;
+	}
+
+	public List<AdsTO> getAdvertisements() {
+		return advertisements;
+	}
+
+	public void setAdvertisements(List<AdsTO> advertisements) {
+		this.advertisements = advertisements;
 	}
 
 }

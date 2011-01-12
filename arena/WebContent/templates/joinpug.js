@@ -1,16 +1,17 @@
-$("#pugsatuais a").button().click(function() {
-	// rotina de desmanche do href
-	var uri = this.href.replace(/(.*)#(.*)/, "$2");
-	var tpl = uri.replace(/(.*),(.*),(.*)/, "$1");
-	var pugid = uri.replace(/(.*),(.*),(.*)/, "$2")//
-	.replace(/(pugid=)(\d+)/, "$2");
-	var pugnome = uri.replace(/(.*),(.*),(.*)/, "$3")//
-	.replace(/(pugnome=)(.*)/, "$2");
-	// do escopo grlobal, definido junto ao usuário.
-	competicao = "<competition><id>" + pugid + //
-	"</id><nome>" + pugnome + "</nome></competition>";
-	$("#formulario").html("").xslTransform({
-		urlxsl : tpl,
-		xml : new XML(competicao)
+(function() {
+	// referências iniciais
+	var competicao = $("#competicao")[0];
+	var papel = $("#papel")[0];
+
+	// combo de papéis
+	$("#papel").xslTransform({
+		urlxml : "resource/role",
+		urlxsl : "templates/roles.xsl"
 	});
-});
+	$("#form button").button().click(function() {
+		var subscricao = "<subscription>" + usuario + //
+		"<role><id>" + papel.value + "</id></role>" + //
+		"<competition><id>" + competicao.value + "</id></competition></subscription>";
+		alert(subscricao);
+	});
+})();

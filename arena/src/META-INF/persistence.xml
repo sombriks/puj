@@ -2,19 +2,24 @@
 <persistence version="2.0"
 	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-	<persistence-unit name="arena" transaction-type="RESOURCE_LOCAL">
-		<non-jta-data-source>java:/comp/env/jdbc/arena-ds</non-jta-data-source>
-		<class>org.cejug.arenapuj.to.AdsTO</class>
-		<class>org.cejug.arenapuj.to.CompetitionTO</class>
-		<class>org.cejug.arenapuj.to.HomeworkTO</class> 
-		<class>org.cejug.arenapuj.to.RoleTO</class>
-		<class>org.cejug.arenapuj.to.SubscriptionTO</class>
+	<persistence-unit name="arena-pu" transaction-type="RESOURCE_LOCAL">
 		<class>org.cejug.arenapuj.to.UserTO</class>
-<!--		<properties>-->
-<!--			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/arena"/>-->
-<!--			<property name="javax.persistence.jdbc.user" value="sa"/>-->
-<!--			<property name="javax.persistence.jdbc.password" value="sa"/>-->
-<!--			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>-->
-<!--		</properties>-->
+		<class>org.cejug.arenapuj.to.SubscriptionTO</class>
+		<class>org.cejug.arenapuj.to.RoleTO</class>
+		<class>org.cejug.arenapuj.to.HomeworkTO</class>
+		<class>org.cejug.arenapuj.to.CompetitionTO</class>
+		<class>org.cejug.arenapuj.to.AdsTO</class>
+		<!-- <non-jta-data-source>java:/comp/env/jdbc/arena-ds</non-jta-data-source> -->
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/arena" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="sa" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<!-- extras -->
+			<property name="eclipselink.weaving" value="static" />
+			<property name="eclipselink.logging.level.sql" value="FINEST" />
+			<property name="eclipselink.logging.level" value="FINEST" />
+			<property name="eclipselink.logging.level.cache" value="FINEST" />
+		</properties>
 	</persistence-unit>
 </persistence>

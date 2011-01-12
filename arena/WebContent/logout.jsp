@@ -32,7 +32,7 @@
 			$("#titulo").dialog();
 			setTimeout(function(){
 				window.location.href="index.jsp";
-			},3000);
+			},2000);
 		</script>
 	</body>
 </html>

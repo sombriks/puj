@@ -20,6 +20,10 @@ public class RoleTO {
 	public RoleTO() {
 	}
 
+	public RoleTO(String t) {
+		titulo = t;
+	}
+	
 	public RoleTO(long i,String t) {
 		titulo = t;
 		id=i;

@@ -20,6 +20,7 @@
 		<script type="text/javascript" src="ui/jquery.ui.sortable.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.draggable.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="ui/jquery.ui.autocomplete.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.resizable.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.dialog.js"></script>
 		<script type="text/javascript" src="ui/jquery.effects.core.js"></script>
@@ -39,6 +40,7 @@
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Submeter trabalho</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Avaliar trabalhos</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Criar propaganda</a>
+			<a href="logout.jsp">Logout(<%=user.getNome()%>)</a>
 			<a href="index.jsp">Voltar</a>
 		</div>
 		<div id="centro" class="ui-widget-content ui-corner-all"></div>

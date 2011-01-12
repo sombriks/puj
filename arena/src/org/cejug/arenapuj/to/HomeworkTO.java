@@ -6,7 +6,6 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -25,10 +24,9 @@ public class HomeworkTO {
 	private long id;
 	@Column(name = "TITULO")
 	private String titulo;
-	@OneToMany
-	@JoinColumn(name = "USER_ID")
-	private List<UserTO> users = new LinkedList<UserTO>();
-
+	@OneToMany(targetEntity=SubscriptionTO.class)
+	private List<SubscriptionTO> inscrito = new LinkedList<SubscriptionTO>();
+	
 	public HomeworkTO() {
 	}
 
@@ -53,12 +51,12 @@ public class HomeworkTO {
 		this.titulo = titulo;
 	}
 
-	public List<UserTO> getUsers() {
-		return users;
+	public List<SubscriptionTO> getInscrito() {
+		return inscrito;
 	}
 
-	public void setUsers(List<UserTO> users) {
-		this.users = users;
+	public void setInscrito(List<SubscriptionTO> inscrito) {
+		this.inscrito = inscrito;
 	}
 
 }

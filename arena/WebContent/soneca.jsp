@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="org.cejug.arenapuj.to.UserTO"%>
+<%
+	UserTO user = (UserTO) request.getSession().getAttribute("user");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -27,9 +30,10 @@
 	<body>
 		<div id="lado">
 			<a href="#[resource/competition,templates/criapug.xsl]">Cria PUG</a>
-			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Ver competições</a>
+			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Submissões de trabalho pendentes</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Propagandas pendentes</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Inscrições pendentes</a>
+			<a href="logout.jsp">Logout(<%=user.getNome()%>)</a>
 			<a href="index.jsp">Voltar</a>
 		</div>
 		<div id="centro" class="ui-widget-content ui-corner-all"></div>

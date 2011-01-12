@@ -2,16 +2,32 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="competition">
-		<a href="#templates/formjoinpug.xsl,pugid={id},pugnome={nome}">
-			<xsl:value-of select="nome" />
-		</a>
+		<option value="{id}">
+			<xsl:value-of select="nome"/>
+		</option>
+		<span/>
 	</xsl:template>
+	<!-- template -->
 	<xsl:template match="/">
-		<h1>Selecione a competição:</h1>
-		<p id="pugsatuais">
-			<xsl:apply-templates />
-		</p>
-		<div id="formulario"></div>
+		<h1>Participar do PUG</h1>
+		<div id="form">
+			<fieldset class="ui-corner-all ui-widget-content">
+				<legend class="ui-widget-header ui-corner-all">Edição da competição</legend>
+				<select id="competicao">
+					<option value="">--selecione--</option>
+					<xsl:apply-templates />
+				</select>
+			</fieldset>
+			<fieldset class="ui-corner-all ui-widget-content">
+				<legend class="ui-widget-header ui-corner-all">Papel desejado</legend>
+				<select id="papel">
+					<!-- vide script, traremos as roles do serviço... -->
+				</select>
+			</fieldset>
+			<p>
+				<button>Solicitar inscrição</button>
+			</p>
+		</div>
 		<script type="text/javascript" src="templates/joinpug.js"></script>
 	</xsl:template>
 </xsl:stylesheet>

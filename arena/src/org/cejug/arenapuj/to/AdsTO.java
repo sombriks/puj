@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.persistence.ManyToOne;
 
 @Entity(name = "ADS")
 @XmlRootElement(name = "ads")
@@ -18,23 +17,15 @@ public class AdsTO {
 	private long id;
 	@Column(name = "TITULO")
 	private String titulo;
-
-	@ManyToOne
-	@JoinColumn(name = "USER_ID")
-	private UserTO user;
-
+	@JoinColumn(name = "SUBSCRIPTION_ID")
+	private SubscriptionTO patrocinador;
+	
 	public AdsTO() {
 	}
 
 	public AdsTO(long i, String t) {
 		titulo = t;
 		id = i;
-	}
-
-	public AdsTO(long i, String t, UserTO u) {
-		titulo = t;
-		id = i;
-		user = u;
 	}
 
 	public String getTitulo() {
@@ -53,12 +44,12 @@ public class AdsTO {
 		this.id = id;
 	}
 
-	public UserTO getUser() {
-		return user;
+	public SubscriptionTO getPatrocinador() {
+		return patrocinador;
 	}
 
-	public void setUser(UserTO user) {
-		this.user = user;
+	public void setPatrocinador(SubscriptionTO patrocinador) {
+		this.patrocinador = patrocinador;
 	}
 
 }

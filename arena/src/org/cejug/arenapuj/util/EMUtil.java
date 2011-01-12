@@ -14,7 +14,7 @@ public enum EMUtil {
 	EMUtil;//INSTANCE
 
 	private EntityManagerFactory factory = Persistence//
-			.createEntityManagerFactory("arena");
+			.createEntityManagerFactory("arena-pu");
 
 	public EntityManager getEntityManager() {
 		return factory.createEntityManager();
