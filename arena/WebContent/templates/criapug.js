@@ -18,7 +18,7 @@
 			url : "resource/competition",
 			success : function() {
 				alert("Sucesso!");
-				window.location.href = "soneca.jsp";
+				$("#lado a:first").click();
 			},
 			error : function(req, errType, ex) {
 				var erro = req.responseXML;

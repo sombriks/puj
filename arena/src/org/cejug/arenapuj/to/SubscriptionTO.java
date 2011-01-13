@@ -2,20 +2,27 @@ package org.cejug.arenapuj.to;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity(name = "SUBSCRIPTION")
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "subscription")
 public class SubscriptionTO {
 
 	@Id
 	@Column(name = "ID")
+	@GeneratedValue
 	private long id;
-	@JoinColumn(name = "ROLE_ID")
-	private RoleTO userRole;
-	@JoinColumn(name = "USER_ID")
+	@XmlElement(name="role")
+	@JoinColumn(name = "ROLE_ID",nullable=false)
+	private RoleTO role;
+	@JoinColumn(name = "USER_ID",nullable=false)
 	private UserTO user;
 	@Column(name = "ATIVO")
 	private boolean ativo;
@@ -28,12 +35,12 @@ public class SubscriptionTO {
 		this.id = id;
 	}
 
-	public RoleTO getUserRole() {
-		return userRole;
+	public RoleTO getRole() {
+		return role;
 	}
 
-	public void setUserRole(RoleTO userRole) {
-		this.userRole = userRole;
+	public void setRole(RoleTO userRole) {
+		this.role = userRole;
 	}
 
 	public UserTO getUser() {

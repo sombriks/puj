@@ -11,12 +11,10 @@
 	<xsl:template match="/">
 		<h1>Participar do PUG</h1>
 		<div id="form">
+			<p class="status"></p>
 			<fieldset class="ui-corner-all ui-widget-content">
-				<legend class="ui-widget-header ui-corner-all">Edição da competição</legend>
-				<select id="competicao">
-					<option value="">--selecione--</option>
-					<xsl:apply-templates />
-				</select>
+				<legend class="ui-widget-header ui-corner-all">Usuário</legend>
+				<label id="lblusu"></label>
 			</fieldset>
 			<fieldset class="ui-corner-all ui-widget-content">
 				<legend class="ui-widget-header ui-corner-all">Papel desejado</legend>

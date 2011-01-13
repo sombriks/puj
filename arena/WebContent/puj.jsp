@@ -29,9 +29,8 @@
 		<script type="text/javascript" src="xsl.js"></script>
 		<script type="text/javascript" src="xml.js"></script>
 		<script type="text/javascript">
-			//recuperando o usuário
-			var usuario = "<user><id><%=user.getId()%></id></user>";
-			var competicao = "";
+			//transcendendo o usuário entre as dimensões
+			var usuario = "<user><id><%=user.getId()%></id><nome><%=user.getNome()%></nome></user>";
 		</script>
 	</head>
 	<body>
