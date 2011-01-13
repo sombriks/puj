@@ -1,28 +1,37 @@
 (function() {
 	// referências iniciais
 	var papel = $("#papel");
-
-	// mostrar o próprio usuário (conforto psicológico)
+	var competicao = $("#competicao");
+	var nomeSubs = $("#nomeComp")[0];
+	
+	// mostrar o usuário (conforto psicológico)
 	$("#lblusu").html($(usuario).find("nome").text());
 	// combo de papéis
 	papel.xslTransform({
 		urlxml : "resource/role",
 		urlxsl : "templates/roles.xsl"
 	});
+	competicao.xslTransform({
+		urlxml : "resource/competition",
+		urlxsl : "templates/listapug2.xsl"
+	});
 	$("#form button").button().click(function() {
 		$("#form .status").removeClass("ui-state-highlight")//
 		.removeClass("ui-corner-all").text("");
-		var subscricao = "<subscription>" + usuario + //
-		"<role><id>" + papel[0].value + "</id></role></subscription>";
+		var user = usuario;//oriundo do jsp
+		var role = "<role><id>"+papel[0].value+"</id></role>";
+		var competition = "<competition><id>"+competicao[0].value+"</id></competition>";
+		var subscription = "<subscription><nome>"+nomeSubs.value+"</nome>"+competition+"</subscription>";
+		var membro = "<member>"+user+role+subscription+"</member>";
 		$.ajax({
 			type : "POST",
 			processData : false,
-			data : subscricao,
+			data : membro,
 			contentType : "text/xml",
-			url : "resource/subscripe",
+			url : "resource/member",
 			success : function() {
 				alert("Sucesso!");
-				window.location.href = "puj.jsp";//XXX não necessário
+				$("#lado a:first").click();
 			},
 			error : function(req, errType, ex) {
 				var erro = req.responseXML;

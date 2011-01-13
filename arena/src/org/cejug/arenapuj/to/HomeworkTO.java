@@ -1,13 +1,12 @@
 package org.cejug.arenapuj.to;
 
-import java.util.LinkedList;
-import java.util.List;
-
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.Lob;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -26,9 +25,11 @@ public class HomeworkTO {
 	private long id;
 	@Column(name = "TITULO")
 	private String titulo;
-	@OneToMany(targetEntity=SubscriptionTO.class)
-	private List<SubscriptionTO> inscrito = new LinkedList<SubscriptionTO>();
-	
+	@Lob
+	@Basic(fetch = FetchType.LAZY)
+	@Column(name = "ZIP")
+	private byte[] zip;
+
 	public HomeworkTO() {
 	}
 
@@ -53,12 +54,12 @@ public class HomeworkTO {
 		this.titulo = titulo;
 	}
 
-	public List<SubscriptionTO> getInscrito() {
-		return inscrito;
+	public byte[] getZip() {
+		return zip;
 	}
 
-	public void setInscrito(List<SubscriptionTO> inscrito) {
-		this.inscrito = inscrito;
+	public void setZip(byte[] zip) {
+		this.zip = zip;
 	}
 
 }

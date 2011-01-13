@@ -15,25 +15,27 @@ public class AdsTO {
 	@Column(name = "ID")
 	@GeneratedValue
 	private long id;
-	@Column(name = "TITULO")
-	private String titulo;
-	@JoinColumn(name = "SUBSCRIPTION_ID")
-	private SubscriptionTO patrocinador;
-	
+	@Column(name = "NOME")
+	private String nome;
+	@JoinColumn(name = "COMP_ID", nullable = false)
+	private CompetitionTO competition;
+	@JoinColumn(name = "MEMB_ID", nullable = false)
+	private MemberTO member;
+
 	public AdsTO() {
 	}
 
 	public AdsTO(long i, String t) {
-		titulo = t;
+		nome = t;
 		id = i;
 	}
 
-	public String getTitulo() {
-		return titulo;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public long getId() {
@@ -44,12 +46,19 @@ public class AdsTO {
 		this.id = id;
 	}
 
-	public SubscriptionTO getPatrocinador() {
-		return patrocinador;
+	public CompetitionTO getCompetition() {
+		return competition;
 	}
 
-	public void setPatrocinador(SubscriptionTO patrocinador) {
-		this.patrocinador = patrocinador;
+	public void setCompetition(CompetitionTO competition) {
+		this.competition = competition;
 	}
 
+	public MemberTO getMember() {
+		return member;
+	}
+
+	public void setMember(MemberTO member) {
+		this.member = member;
+	}
 }

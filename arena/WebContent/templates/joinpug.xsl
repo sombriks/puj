@@ -17,10 +17,20 @@
 				<label id="lblusu"></label>
 			</fieldset>
 			<fieldset class="ui-corner-all ui-widget-content">
+				<legend class="ui-widget-header ui-corner-all">Competição</legend>
+				<select id="competicao">
+					<!-- vide script, traremos as competições do serviço... -->
+				</select>
+			</fieldset>
+			<fieldset class="ui-corner-all ui-widget-content">
 				<legend class="ui-widget-header ui-corner-all">Papel desejado</legend>
 				<select id="papel">
 					<!-- vide script, traremos as roles do serviço... -->
 				</select>
+			</fieldset>
+			<fieldset class="ui-corner-all ui-widget-content">
+				<legend class="ui-widget-header ui-corner-all">Apelido do time</legend>
+				<input id="nomeComp"/>
 			</fieldset>
 			<p>
 				<button>Solicitar inscrição</button>
