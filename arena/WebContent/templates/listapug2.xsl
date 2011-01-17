@@ -7,7 +7,7 @@
 		</option>
 	</xsl:template>
 	<xsl:template match="/">
-		<option value="">--selecione--</option>
+		<option value="-1">--selecione--</option>
 		<xsl:apply-templates />
 	</xsl:template>
 </xsl:stylesheet>

@@ -30,10 +30,22 @@
 			</fieldset>
 			<fieldset class="ui-corner-all ui-widget-content">
 				<legend class="ui-widget-header ui-corner-all">Apelido do time</legend>
-				<input id="nomeComp"/>
+				<select id="selComp">
+					<!-- dinâmico também -->
+					<option>--selecione--</option>
+				</select>
 			</fieldset>
 			<p>
 				<button>Solicitar inscrição</button>
+			</p>
+		</div>
+		<div id="novaeq" title="Nova equipe" style="display:none">
+			<fieldset class="ui-corner-all ui-widget-content">
+				<legend class="ui-widget-header ui-corner-all">Título da equipe</legend>
+				<input/>
+			</fieldset>
+			<p>
+				<button>Solicitar criação de equipe</button>
 			</p>
 		</div>
 		<script type="text/javascript" src="templates/joinpug.js"></script>
