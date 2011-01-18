@@ -41,4 +41,17 @@ drop table
 	values
 		((select max(SEQ_COUNT) FROM SEQUENCE),'puj 2009');
 		
-		
+-- remover inscrições e membros
+	delete from SUBSCRIPTION;
+	delete from MEMBER;
+
+-- olhando as inscrições
+select 
+	U.NOME,R.TITULO,S.NOME 
+from 
+	USER U,ROLE R,SUBSCRIPTION S,MEMBER M
+WHERE
+	U.ID = M.USER_ID 
+	AND R.ID = M.ROLE_ID 
+	AND S.ID = M.SUBS_ID 
+--	AND M.ID = 56

@@ -22,6 +22,17 @@
 	});
 	// mostrar o usuário (conforto psicológico)
 	$("#lblusu").html($(usuario).find("nome").text());
+
+	function updateSubscriptions(){
+		selComp.html("").xslTransform({
+			urlxml : "resource/subscription?compid="+competicao[0].value,
+			urlxsl : "templates/listasubscricao.xsl",
+			hook:function(){
+				
+			}
+		});
+	}
+	
 	//dialog de criação de competição
 	$("#novaeq").dialog({modal:true,autoOpen:false});
 	$("#novaeq button").button().click(function(){
@@ -35,27 +46,21 @@
 			url : "resource/subscription",
 			success : function() {
 				alert("Sua requisição de criação de time foi enviada com sucesso!");
-				$("#lado a:first").click();
+				updateSubscriptions();
 			}
 		});
 		$("#novaeq").dialog("close");
-		$("#lado a:first").click();
 	});
 	
 	//eventos
 	competicao.change(function(){
-		selComp.html("").xslTransform({
-			urlxml : "resource/subscription?compid="+competicao[0].value,
-			urlxsl : "templates/listasubscricao.xsl",
-			hook:function(){
-				
-			}
-		});
+		updateSubscriptions();
 	});
 	selComp.change(function(){
 		if(selComp[0].value=="_novo_"){
 			$("#novaeq").dialog("open");
-		}
+		}else
+			subs.id=selComp[0].value;
 	});
 	$("#form button").button().click(function() {
 		$("#form .status").removeClass("ui-state-highlight")//

@@ -29,13 +29,14 @@ public class MemberRcs {
 		role = em.find(RoleTO.class, role.getId());
 		user = em.find(UserTO.class, user.getId());
 		comp = em.find(CompetitionTO.class, comp.getId());
+		subs = em.find(SubscriptionTO.class, subs.getId());
 		//referenciar
 		member.setRole(role);
 		member.setUser(user);
 		subs.setCompetition(comp);
+		member.setSubscription(subs);
 		//salvar
 		t.begin();
-		em.persist(subs);
 		em.persist(member);
 		t.commit();
 		em.close();
