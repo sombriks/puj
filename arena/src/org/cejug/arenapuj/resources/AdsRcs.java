@@ -30,8 +30,8 @@ public class AdsRcs {
 			@QueryParam("{compid: \\d+}") long idCmp) throws Exception {
 		EntityManager em = EMUtil.getEntityManager();
 		List<AdsTO> l = new LinkedList<AdsTO>();
-//		em.createQuery(b.getString("select"),//
-//				AdsTO.class).getResultList();
+		em.createQuery(b.getString("select"),//
+				AdsTO.class).setParameter("compid", idCmp).getResultList();
 		em.close();
 		return l;
 	}

@@ -36,7 +36,7 @@
 	<body>
 		<div id="lado">
 			<a href="#[resource/competition,templates/joinpug.xsl]">Inscrever-se</a>
-			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Submeter trabalho</a>
+			<a href="#[resource/competition,templates/addhomework.xsl]">Submeter trabalho</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Avaliar trabalhos</a>
 			<a href="#[staticdata/lorenipsum.xml,templates/content.xsl]">Criar propaganda</a>
 			<a href="logout.jsp">Logout(<%=user.getNome()%>)</a>

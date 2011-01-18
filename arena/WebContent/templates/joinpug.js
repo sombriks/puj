@@ -78,7 +78,14 @@
 			url : "resource/member",
 			success : function() {
 				alert("Sua requisição de inscrição foi enviada com sucesso!");
-				$("#lado a:first").click();
+				$("#form select").each(function(){
+					this.selectedIndex=0;
+				});
+				$("#form input").each(function(){
+					this.value="";
+				});
+				subs.id=0;
+				subs.nome="";
 			},
 			error : function(req, errType, ex) {
 				var erro = req.responseXML;
