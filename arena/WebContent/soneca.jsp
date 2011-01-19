@@ -11,7 +11,7 @@
 		<title>=== Área Restrita ===</title>
 		<!-- START jQuery support (the order is important!)-->
 		<link rel="stylesheet" href="base/jquery.ui.all.css"/>
-		<script type="text/javascript" src="jquery-1.4.4.js"></script>
+		<script type="text/javascript" src="js/jquery-1.4.4.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.core.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.widget.js"></script>
 		<script type="text/javascript" src="ui/jquery.ui.tabs.js"></script>
@@ -25,7 +25,7 @@
 		<script type="text/javascript" src="ui/jquery.effects.core.js"></script>
 		<!-- END jQuery support -->
 		<link rel="stylesheet" href="soneca.css"/>
-		<script type="text/javascript" src="xsl.js"></script>
+		<script type="text/javascript" src="js/xsl.js"></script>
 	</head>
 	<body>
 		<div id="lado">

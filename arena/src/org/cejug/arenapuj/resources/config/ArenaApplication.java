@@ -1,9 +1,17 @@
-package org.cejug.arenapuj.resources;
+package org.cejug.arenapuj.resources.config;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.ws.rs.core.Application;
+
+import org.cejug.arenapuj.resources.AdsRcs;
+import org.cejug.arenapuj.resources.CompetitionRcs;
+import org.cejug.arenapuj.resources.HomeworkRcs;
+import org.cejug.arenapuj.resources.MemberRcs;
+import org.cejug.arenapuj.resources.RoleRcs;
+import org.cejug.arenapuj.resources.SubscriptionRcs;
+import org.cejug.arenapuj.resources.UserRcs;
 
 /**
  * esta classe funciona como ponto de entrada do Jersey. com ele jogamos fora a

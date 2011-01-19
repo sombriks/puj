@@ -1,8 +1,7 @@
 /*
  * script da página inicial da aplicação
  */
-(function(){
-		
+(function() {
 	/**
 	 * utilitário pra desmontar a hash do link.
 	 */
@@ -24,7 +23,7 @@
 		// fallback
 		$("#lado a:first").click();
 	}
-	
+
 	/**
 	 * registrando eventos
 	 */
