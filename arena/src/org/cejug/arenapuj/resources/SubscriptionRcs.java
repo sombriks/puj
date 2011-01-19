@@ -12,8 +12,8 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 
-import org.cejug.arenapuj.to.CompetitionTO;
-import org.cejug.arenapuj.to.SubscriptionTO;
+import org.cejug.arenapuj.to.entity.CompetitionTO;
+import org.cejug.arenapuj.to.entity.SubscriptionTO;
 
 /**
  * inscrição de equipe na competição

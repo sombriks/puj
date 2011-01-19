@@ -9,7 +9,7 @@ import javax.persistence.EntityManager;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-import org.cejug.arenapuj.to.RoleTO;
+import org.cejug.arenapuj.to.entity.RoleTO;
 
 @Path("/role")
 public class RoleRcs {

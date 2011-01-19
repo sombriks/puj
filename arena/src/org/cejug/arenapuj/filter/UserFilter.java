@@ -10,7 +10,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import org.cejug.arenapuj.to.UserTO;
+import org.cejug.arenapuj.to.entity.UserTO;
 
 /**
  * Servlet Filter implementation class UserFilter

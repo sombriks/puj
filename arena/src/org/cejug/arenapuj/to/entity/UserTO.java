@@ -1,4 +1,4 @@
-package org.cejug.arenapuj.to;
+package org.cejug.arenapuj.to.entity;
 
 import java.util.Date;
 

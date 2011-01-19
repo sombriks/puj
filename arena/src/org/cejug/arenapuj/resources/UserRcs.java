@@ -16,7 +16,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Context;
 
-import org.cejug.arenapuj.to.UserTO;
+import org.cejug.arenapuj.to.entity.UserTO;
 
 @Path("/user")
 public class UserRcs {

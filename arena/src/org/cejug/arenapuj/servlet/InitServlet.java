@@ -11,7 +11,7 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
-import org.cejug.arenapuj.to.RoleTO;
+import org.cejug.arenapuj.to.entity.RoleTO;
 
 /**
  * Este servlet serve apenas para verificar as condições do banco de dados no

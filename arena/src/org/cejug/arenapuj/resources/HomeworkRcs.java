@@ -9,7 +9,7 @@ import javax.persistence.EntityManager;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-import org.cejug.arenapuj.to.HomeworkTO;
+import org.cejug.arenapuj.to.entity.HomeworkTO;
 
 @Path("/homework")
 public class HomeworkRcs {

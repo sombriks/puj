@@ -7,11 +7,11 @@ import javax.persistence.EntityTransaction;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
-import org.cejug.arenapuj.to.CompetitionTO;
-import org.cejug.arenapuj.to.MemberTO;
-import org.cejug.arenapuj.to.RoleTO;
-import org.cejug.arenapuj.to.SubscriptionTO;
-import org.cejug.arenapuj.to.UserTO;
+import org.cejug.arenapuj.to.entity.CompetitionTO;
+import org.cejug.arenapuj.to.entity.MemberTO;
+import org.cejug.arenapuj.to.entity.RoleTO;
+import org.cejug.arenapuj.to.entity.SubscriptionTO;
+import org.cejug.arenapuj.to.entity.UserTO;
 
 @Path("/member")
 public class MemberRcs {

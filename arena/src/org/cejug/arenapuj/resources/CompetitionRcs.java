@@ -12,7 +12,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
-import org.cejug.arenapuj.to.CompetitionTO;
+import org.cejug.arenapuj.to.entity.CompetitionTO;
 
 @Path("/competition")
 public class CompetitionRcs {

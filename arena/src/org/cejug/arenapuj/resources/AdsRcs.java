@@ -11,7 +11,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 
-import org.cejug.arenapuj.to.AdsTO;
+import org.cejug.arenapuj.to.entity.AdsTO;
 
 /**
  * recurso que dá acesso às propagandas

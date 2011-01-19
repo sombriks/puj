@@ -7,9 +7,12 @@
 			<div id="formhw">
 				<fieldset class="ui-corner-all ui-widget-content">
 					<legend class="ui-widget-header ui-corner-all">Competição</legend>
-					<select id="competicao">
-						<xsl:apply-imports/>
-					</select>
+						<select id="competicao">
+							<xsl:apply-imports/>
+						</select>
+					<div title="info">
+						<p>Not implemented yet</p>
+					</div>
 				</fieldset>
 			</div>
 			<script src="templates/addhomework.js"></script>
