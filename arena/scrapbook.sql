@@ -96,3 +96,5 @@ WHERE
 --	AND M.ID = 56
 	
 SELECT * FROM TEAM
+
+update ROLE set ID = 1001 where ID = 0

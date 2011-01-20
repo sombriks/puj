@@ -20,6 +20,13 @@ public class ParticipacaoTO {
 	private CompetitionTO competicao;
 	private List<MemberTO> membros;
 
+	public ParticipacaoTO() {
+	}
+
+	public ParticipacaoTO(CompetitionTO comp) {
+		competicao = comp;
+	}
+
 	public CompetitionTO getCompeticao() {
 		return competicao;
 	}
