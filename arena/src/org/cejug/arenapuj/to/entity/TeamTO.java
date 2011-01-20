@@ -14,9 +14,9 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author sombriks
  *
  */
-@Entity(name = "SUBSCRIPTION")
-@XmlRootElement(name = "subscription")
-public class SubscriptionTO {
+@Entity(name = "TEAM")
+@XmlRootElement(name = "team")
+public class TeamTO {
 
 	@Id
 	@Column(name = "ID")
@@ -29,7 +29,7 @@ public class SubscriptionTO {
 	@OneToOne
 	@JoinColumn(name="HOME_ID")
 	private HomeworkTO homework;
-	@JoinColumn(name="COMP_ID")
+	@JoinColumn(name="COMP_ID", nullable=false)
 	private CompetitionTO competition;
 
 	public long getId() {

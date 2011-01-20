@@ -13,7 +13,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 
 import org.cejug.arenapuj.to.entity.CompetitionTO;
-import org.cejug.arenapuj.to.entity.SubscriptionTO;
+import org.cejug.arenapuj.to.entity.TeamTO;
 
 /**
  * inscrição de equipe na competição
@@ -21,32 +21,32 @@ import org.cejug.arenapuj.to.entity.SubscriptionTO;
  * @author sombriks
  *
  */
-@Path("/subscription")
-public class SubscriptionRcs {
+@Path("/team")
+public class TeamRcs {
 
 	private ResourceBundle b = ResourceBundle//
-			.getBundle("org.cejug.arenapuj.resources.SubscriptionRcs");
+			.getBundle("org.cejug.arenapuj.resources.TeamRcs");
 
 	@GET
-	public List<SubscriptionTO> listSubscriptions(
+	public List<TeamTO> listTeams(
 			@QueryParam("compid") long compId) throws Exception {
 		EntityManager em = EMUtil.getEntityManager();
-		List<SubscriptionTO> l = em.createQuery(b.getString("select"),//
-				SubscriptionTO.class).setParameter("compid", compId)//
+		List<TeamTO> l = em.createQuery(b.getString("select"),//
+				TeamTO.class).setParameter("compid", compId)//
 				.getResultList();
 		em.close();
 		return l;
 	}
 	
 	@POST
-	public void addSubscription(SubscriptionTO subscription) throws Exception {
+	public void addTeam(TeamTO team) throws Exception {
 		EntityManager em = EMUtil.getEntityManager();
-		CompetitionTO competition = subscription.getCompetition();
+		CompetitionTO competition = team.getCompetition();
 		competition = em.find(CompetitionTO.class, competition.getId());
-		subscription.setCompetition(competition);
+		team.setCompetition(competition);
 		EntityTransaction tran = em.getTransaction();
 		tran.begin();
-		em.persist(subscription);
+		em.persist(team);
 		tran.commit();
 		em.close();
 	}

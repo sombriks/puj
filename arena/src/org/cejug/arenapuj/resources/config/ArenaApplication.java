@@ -10,7 +10,7 @@ import org.cejug.arenapuj.resources.CompetitionRcs;
 import org.cejug.arenapuj.resources.HomeworkRcs;
 import org.cejug.arenapuj.resources.MemberRcs;
 import org.cejug.arenapuj.resources.RoleRcs;
-import org.cejug.arenapuj.resources.SubscriptionRcs;
+import org.cejug.arenapuj.resources.TeamRcs;
 import org.cejug.arenapuj.resources.UserRcs;
 
 /**
@@ -30,7 +30,7 @@ public class ArenaApplication extends Application {
 		singletons.add(new HomeworkRcs());
 		singletons.add(new MemberRcs());
 		singletons.add(new RoleRcs());
-		singletons.add(new SubscriptionRcs());
+		singletons.add(new TeamRcs());
 		singletons.add(new UserRcs());
 	}
 

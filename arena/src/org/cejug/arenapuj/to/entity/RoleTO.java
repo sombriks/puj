@@ -14,18 +14,18 @@ public class RoleTO {
 	@Column(name="ID")
 	@GeneratedValue
 	private long id;
-	@Column(name="TITULO")
-	private String titulo;
+	@Column(name="NOME")
+	private String nome;
 
 	public RoleTO() {
 	}
 
 	public RoleTO(String t) {
-		titulo = t;
+		nome = t;
 	}
 	
 	public RoleTO(long i,String t) {
-		titulo = t;
+		nome = t;
 		id=i;
 	}
 
@@ -37,12 +37,12 @@ public class RoleTO {
 		this.id = id;
 	}
 
-	public String getTitulo() {
-		return titulo;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 }

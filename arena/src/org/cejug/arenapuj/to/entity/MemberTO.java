@@ -19,8 +19,8 @@ public class MemberTO {
 	private RoleTO role;
 	@JoinColumn(name = "USER_ID", nullable = false)
 	private UserTO user;
-	@JoinColumn(name = "SUBS_ID", nullable = false)
-	private SubscriptionTO subscription;
+	@JoinColumn(name = "TEAM_ID", nullable = false)
+	private TeamTO team;
 	@Column(name = "ATIVO")
 	private boolean ativo;
 
@@ -48,12 +48,12 @@ public class MemberTO {
 		this.user = user;
 	}
 
-	public SubscriptionTO getSubscription() {
-		return subscription;
+	public TeamTO getTeam() {
+		return team;
 	}
 
-	public void setSubscription(SubscriptionTO subscription) {
-		this.subscription = subscription;
+	public void setTeam(TeamTO team) {
+		this.team = team;
 	}
 
 	public boolean isAtivo() {

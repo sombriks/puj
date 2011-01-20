@@ -3,7 +3,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="role">
 		<option value="{id}">
-			<xsl:value-of select="titulo" />
+			<xsl:value-of select="nome" />
 		</option>
 	</xsl:template>
 	<xsl:template match="/">

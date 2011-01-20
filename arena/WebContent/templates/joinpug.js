@@ -23,10 +23,10 @@
 	// mostrar o usuário (conforto psicológico)
 	$("#lblusu").html($(usuario).find("nome").text());
 
-	function updateSubscriptions(){
+	function updateteams(){
 		selComp.html("").xslTransform({
-			urlxml : "resource/subscription?compid="+competicao[0].value,
-			urlxsl : "templates/listasubscricao.xsl",
+			urlxml : "resource/team?compid="+competicao[0].value,
+			urlxsl : "templates/listateam.xsl",
 			hook:function(){
 				
 			}
@@ -37,16 +37,16 @@
 	$("#novaeq").dialog({modal:true,autoOpen:false});
 	$("#novaeq button").button().click(function(){
 		var competition = "<competition><id>"+competicao[0].value+"</id></competition>";
-		var subscription = "<subscription><id>"+subs.id+"</id><nome>"+newsubs[0].value+"</nome>"+competition+"</subscription>";
+		var team = "<team><id>"+subs.id+"</id><nome>"+newsubs[0].value+"</nome>"+competition+"</team>";
 		$.ajax({
 			type : "POST",
 			processData : false,
-			data : subscription,
+			data : team,
 			contentType : "text/xml",
-			url : "resource/subscription",
+			url : "resource/team",
 			success : function() {
 				alert("Sua requisição de criação de time foi enviada com sucesso!");
-				updateSubscriptions();
+				updateteams();
 			}
 		});
 		$("#novaeq").dialog("close");
@@ -54,7 +54,7 @@
 	
 	//eventos
 	competicao.change(function(){
-		updateSubscriptions();
+		updateteams();
 	});
 	selComp.change(function(){
 		if(selComp[0].value=="_novo_"){
@@ -68,8 +68,8 @@
 		var user = usuario;//oriundo do jsp
 		var role = "<role><id>"+papel[0].value+"</id></role>";
 		var competition = "<competition><id>"+competicao[0].value+"</id></competition>";
-		var subscription = "<subscription><id>"+subs.id+"</id><nome>"+subs.nome+"</nome>"+competition+"</subscription>";
-		var membro = "<member>"+user+role+subscription+"</member>";
+		var team = "<team><id>"+subs.id+"</id><nome>"+subs.nome+"</nome>"+competition+"</team>";
+		var membro = "<member>"+user+role+team+"</member>";
 		$.ajax({
 			type : "POST",
 			processData : false,

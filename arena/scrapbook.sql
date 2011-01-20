@@ -1,5 +1,5 @@
 -- limpeza da base anterior
-drop table 
+drop table if exists 
 	ADS,
 	COMPETITION,
 	COMPETITION_ADS,
@@ -10,6 +10,7 @@ drop table
 	ROLE,
 	SEQUENCE,
 	SUBSCRIPTION,
+	TEAM,
 	USER;
 	
 --insert de uns usuários de exemplo (no atual esquema do banco)
@@ -29,7 +30,7 @@ drop table
 	values
 		((select max(SEQ_COUNT) FROM SEQUENCE),'z','z','z');
 
--- insert de competições		
+-- insert de competições de exemplo
 	update SEQUENCE SET SEQ_COUNT = SEQ_COUNT + 1 WHERE SEQ_NAME = 'SEQ_GEN';
 	insert into COMPETITION
 		(ID,NOME)
@@ -40,7 +41,43 @@ drop table
 		(ID,NOME)
 	values
 		((select max(SEQ_COUNT) FROM SEQUENCE),'puj 2009');
+	update SEQUENCE SET SEQ_COUNT = SEQ_COUNT + 1 WHERE SEQ_NAME = 'SEQ_GEN';
+	insert into COMPETITION
+		(ID,NOME)
+	values
+		((select max(SEQ_COUNT) FROM SEQUENCE),'puj 2010');
+	update SEQUENCE SET SEQ_COUNT = SEQ_COUNT + 1 WHERE SEQ_NAME = 'SEQ_GEN';
+	insert into COMPETITION
+		(ID,NOME)
+	values
+		((select max(SEQ_COUNT) FROM SEQUENCE),'puj 2011');
 		
+-- insert de times de exemplo
+	update SEQUENCE SET SEQ_COUNT = SEQ_COUNT + 1 WHERE SEQ_NAME = 'SEQ_GEN';
+	insert into TEAM
+		(ID,NOME,COMP_ID)
+	values
+		((select max(SEQ_COUNT) from SEQUENCE),'equipe rocket',
+			(select ID from COMPETITION where NOME = 'puj 2008'));
+	update SEQUENCE SET SEQ_COUNT = SEQ_COUNT + 1 WHERE SEQ_NAME = 'SEQ_GEN';
+	insert into TEAM
+		(ID,NOME,COMP_ID)
+	values
+		((select max(SEQ_COUNT) from SEQUENCE),'equipe rocket',
+			(select ID from COMPETITION where NOME = 'puj 2009'));
+	update SEQUENCE SET SEQ_COUNT = SEQ_COUNT + 1 WHERE SEQ_NAME = 'SEQ_GEN';
+	insert into TEAM
+		(ID,NOME,COMP_ID)
+	values
+		((select max(SEQ_COUNT) from SEQUENCE),'equipe rocket',
+			(select ID from COMPETITION where NOME = 'puj 2010'));
+	update SEQUENCE SET SEQ_COUNT = SEQ_COUNT + 1 WHERE SEQ_NAME = 'SEQ_GEN';
+	insert into TEAM
+		(ID,NOME,COMP_ID)
+	values
+		((select max(SEQ_COUNT) from SEQUENCE),'equipe rocket',
+			(select ID from COMPETITION where NOME = 'puj 2011'));
+			
 -- remover inscrições e membros
 	delete from SUBSCRIPTION 
 	where ID = 55;
@@ -48,14 +85,14 @@ drop table
 
 -- olhando as inscrições
 select 
-	U.NOME,R.TITULO,S.NOME,C.NOME 
+	U.NOME,R.TITULO,T.NOME,C.NOME 
 from 
-	USER U,ROLE R,SUBSCRIPTION S,MEMBER M,COMPETITION C
+	USER U,ROLE R,TEAM T,MEMBER M,COMPETITION C
 WHERE
 	U.ID = M.USER_ID 
 	AND R.ID = M.ROLE_ID 
-	AND S.ID = M.SUBS_ID
-	AND C.ID = S.COMP_ID
+	AND T.ID = M.TEAM_ID
+	AND C.ID = T.COMP_ID
 --	AND M.ID = 56
 	
-SELECT * FROM SUBSCRIPTION
+SELECT * FROM TEAM
